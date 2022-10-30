@@ -50,10 +50,13 @@ TODO
 TODO
 
 # Findings
-**Note:** Not for the prokect proposal; for final report only.
+**Note:** Not for the project proposal; for final report only.
 
 # Discussion
-**Note:** Not for the prokect proposal; for final report only.
+**Note:** Not for the project proposal; for final report only.
+
+# Conclusion
+**Note:** Not for the project proposal; for final report only.
 
 # Acknowledgements
 TODO
