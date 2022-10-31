@@ -29,10 +29,10 @@ We are concerned with how unorganized and scattered professional Volleyball data
 2. Professional Athletes
 3. Sport growth over time
 4. Country power influencing sport success
-5. How to promote a global-even-playing-field
+5. Equitable sports information access
 
 # Introduction
-TODO
+In the world of professional sports, data on even the most popular sports can be confusing to find.  Trying to search for sports statistics can lead to loads of information and different statistics on the sports. However, the information can often be scattered and not easy to comprehend. The information for tournaments around the world might be in one place, where the stats for specific players might be in another. If someone wanted to easily access a comprehensive amount of data on a sport they would have to go searching in multiple places. Our goal for the project was to be able to create a place where athletes, coaches, or even spectators of Olymppic Volleyball could go and find most of the information they were looking for. We not only wanted this project to have the data they were looking for, but to also have it be more easily comprehensible for its use for the more casual fan.
 
 # Problem Domain
 TODO
