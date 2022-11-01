@@ -56,7 +56,21 @@ This question helps us determine if external factors behind an athlete have any 
 With this question we would be able to see if the home country has any advantage in the Volleyball matches vs. the countries who are not hosting the game. This might be considered by officials of events to analyze different advantages.
 
 # The Dataset
-TODO
+1. Our datasets are related to our problem domain because the first one encompasses data on all medals, athletes, and hosts in the Summer and Winter Olympic games from 1986-2002 and the second provides data on all Summer and Winter Olympic medalists from 1896 Athens to Rio 2016. Our project is oriented around Volleyball in the Olympics, so these datasets on sports and medalists at the Olympics relate back to Volleyball which is a sport at the Olympics which athletes win medals in. More specifically, our datasets focus on the following:
+    -  Which countries won each medal (gold, silver, or bronze) in each category.
+    - Which athletes won each medal for each country.
+    - Whether a specific event is a single or multi-gender sport.
+    - Whether a specific event is a team or individual player sport.
+    - What variation of the event the medal is for (i.e. beach or on-court Volleyball).
+2. Summary of data set, citation, and urls:
+
+| Data File Name | Number of Observations | Number of Variables | Citation (MLA) | URL |
+| ---- | ---- | ---- | ---- | ---- |
+| olympic_athletes.csv | 75900 | 7 | Petro. “Olympic Summer & Winter Games, 1986-2022.” Kaggle, 11 Apr. 2022, https://www.kaggle.com/datasets/piterfm/olympic-games-medals-19862018?select=olympic_athletes.csv. | https://www.kaggle.com/datasets/piterfm/olympic-games-medals-19862018?select=olympic_athletes.csv |
+| olympic_hosts.csv | 53 | 7 | Petro. “Olympic Summer & Winter Games, 1986-2022.” Kaggle, 11 Apr. 2022, https://www.kaggle.com/datasets/piterfm/olympic-games-medals-19862018?select=olympic_hosts.csv. | https://www.kaggle.com/datasets/piterfm/olympic-games-medals-19862018?select=olympic_hosts.csv |
+| olympic_results.csv | 162804 | 16 | Petro. “Olympic Summer & Winter Games, 1986-2022.” Kaggle, 11 Apr. 2022, https://www.kaggle.com/datasets/piterfm/olympic-games-medals-19862018?select=olympic_results.csv. | https://www.kaggle.com/datasets/piterfm/olympic-games-medals-19862018?select=olympic_results.csv |
+| olympic_medals.csv | 21697 | 12 | Petro. “Olympic Summer & Winter Games, 1986-2022.” Kaggle, 11 Apr. 2022, https://www.kaggle.com/datasets/piterfm/olympic-games-medals-19862018?select=olympic_medals.csv. | https://www.kaggle.com/datasets/piterfm/olympic-games-medals-19862018?select=olympic_medals.csv |
+
 
 # Expected Implications
 TODO
@@ -74,10 +88,10 @@ TODO
 **Note:** Not for the project proposal; for final report only.
 
 # Acknowledgements
-TODO
+Thank you to Petro, who created all of the extremely detailed, accurate, and interlinked `.csv` files for the _"Olympic Summer & Winter Games, 1986-2022"_ that we are using for the basis of our project.
 
 # References
-TODO
+- See **Dataset**, Part 2 table for `\data`'s .csv file references.
 
 # Appendix A: Questions
-TODO
+- Is there a 1:1 ratio of **research question** to data visual that we will be implementing in later parts of the assignment?
