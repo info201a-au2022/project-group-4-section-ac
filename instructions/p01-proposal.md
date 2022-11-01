@@ -62,7 +62,7 @@ With this question we would be able to see if the home country has any advantage
     - Whether a specific event is a single or multi-gender sport.
     - Whether a specific event is a team or individual player sport.
     - What variation of the event the medal is for (i.e. beach or on-court Volleyball).
-2. Summary of data set, citation, and urls:
+2. Summary of data set:
 
 | Data File Name | Number of Observations | Number of Variables | Citation (MLA) | URL |
 | ---- | ---- | ---- | ---- | ---- |
@@ -71,6 +71,12 @@ With this question we would be able to see if the home country has any advantage
 | olympic_results.csv | 162804 | 16 | Petro. “Olympic Summer & Winter Games, 1986-2022.” Kaggle, 11 Apr. 2022, https://www.kaggle.com/datasets/piterfm/olympic-games-medals-19862018?select=olympic_results.csv. | https://www.kaggle.com/datasets/piterfm/olympic-games-medals-19862018?select=olympic_results.csv |
 | olympic_medals.csv | 21697 | 12 | Petro. “Olympic Summer & Winter Games, 1986-2022.” Kaggle, 11 Apr. 2022, https://www.kaggle.com/datasets/piterfm/olympic-games-medals-19862018?select=olympic_medals.csv. | https://www.kaggle.com/datasets/piterfm/olympic-games-medals-19862018?select=olympic_medals.csv |
 
+3. Citation, and urls: see above table.
+4. Describe the dataset:
+    - (a) For all of the above `.csv` files, Petro was the official (or main) author. Petro had some collaborators, Kalilur Rahman and Niek van der Zwaag, but they were not listed as official authors. The data can be estimated to have been collected from https://olympics.com/ by Petro around November 2021, as that is when the downloads of this data set started (there is no official start recording date anywhere on the data set FAQs. However, the data on https://olympics.com/ has been being recorded since 12/31/1899 up until 04/29/2022. Petro did not record any specific purpose behind their decision to create this dataset themself. However, we can suppose that this data was collected as a part of their own personal project due to the Python scripts of visualizations that they attached in the description of the dataset.
+    - (b) The data collection effort by Petro was not funded, or at least he does not disclose that it was funded. The Olympics organization (and the host nation of the Olympics game for that year) funds the collection and recording of data on the Olympic games. Future host nations, historians, and future athletes (non-Olympic athletes as well) all benefit from the data. Sports organizations, corporations, and future host nations will most likely benefit monetarily from data on the past games.
+    - (c) The data was validated by the Olympics organization. Since Petro pulled the data only from the Olympics organization, then the data was pulled from the one true source (and authority) on what happened during previous Olympic games. Therefore, the data is trustworthy.
+    - (d) We obtained the data by downloading the `.csv` files that Petro organized the data in from the links included in the above table. We credited the source of the data, Petro, who credited (in his own sources), the Olympics organization.
 
 # Expected Implications
 TODO
