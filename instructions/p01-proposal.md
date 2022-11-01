@@ -79,7 +79,9 @@ With this question we would be able to see if the home country has any advantage
     - (d) We obtained the data by downloading the `.csv` files that Petro organized the data in from the links included in the above table. We credited the source of the data, Petro, who credited (in his own sources), the Olympics organization.
 
 # Expected Implications
-TODO
+Assuming we answered all of our research questions, there are two main implications:
+1. The first implication is that players who want to get better at the sport can look at and understand the data better. For example, if someone wants to easily find the best player or best region to adopt a style form, they would be easily able to look them up with our project.
+2. The second implication with our project would be for the average fan. Someone who is just getting into volleyball might want to do research on a specific player and their stats. Or they might be interested in the general trend of popularity of the sport. The average person would be much more comfortable with using or project than trying to scour the internet for the information.
 
 # Limitations
 TODO
