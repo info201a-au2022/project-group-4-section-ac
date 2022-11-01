@@ -66,10 +66,10 @@ With this question we would be able to see if the home country has any advantage
 
 | Data File Name | Number of Observations | Number of Variables | Citation (MLA) | URL |
 | ---- | ---- | ---- | ---- | ---- |
-| olympic_athletes.csv | 75900 | 7 | Petro. “Olympic Summer & Winter Games, 1986-2022.” Kaggle, 11 Apr. 2022, https://www.kaggle.com/datasets/piterfm/olympic-games-medals-19862018?select=olympic_athletes.csv. | https://www.kaggle.com/datasets/piterfm/olympic-games-medals-19862018?select=olympic_athletes.csv |
-| olympic_hosts.csv | 53 | 7 | Petro. “Olympic Summer & Winter Games, 1986-2022.” Kaggle, 11 Apr. 2022, https://www.kaggle.com/datasets/piterfm/olympic-games-medals-19862018?select=olympic_hosts.csv. | https://www.kaggle.com/datasets/piterfm/olympic-games-medals-19862018?select=olympic_hosts.csv |
-| olympic_results.csv | 162804 | 16 | Petro. “Olympic Summer & Winter Games, 1986-2022.” Kaggle, 11 Apr. 2022, https://www.kaggle.com/datasets/piterfm/olympic-games-medals-19862018?select=olympic_results.csv. | https://www.kaggle.com/datasets/piterfm/olympic-games-medals-19862018?select=olympic_results.csv |
-| olympic_medals.csv | 21697 | 12 | Petro. “Olympic Summer & Winter Games, 1986-2022.” Kaggle, 11 Apr. 2022, https://www.kaggle.com/datasets/piterfm/olympic-games-medals-19862018?select=olympic_medals.csv. | https://www.kaggle.com/datasets/piterfm/olympic-games-medals-19862018?select=olympic_medals.csv |
+| [olympic_athletes.csv](../data/olympic_athletes.csv) | 75900 | 7 | Petro. “Olympic Summer & Winter Games, 1986-2022.” Kaggle, 11 Apr. 2022, https://www.kaggle.com/datasets/piterfm/olympic-games-medals-19862018?select=olympic_athletes.csv. | https://www.kaggle.com/datasets/piterfm/olympic-games-medals-19862018?select=olympic_athletes.csv |
+| [olympic_hosts.csv](../data/olympic_hosts.csv) | 53 | 7 | Petro. “Olympic Summer & Winter Games, 1986-2022.” Kaggle, 11 Apr. 2022, https://www.kaggle.com/datasets/piterfm/olympic-games-medals-19862018?select=olympic_hosts.csv. | https://www.kaggle.com/datasets/piterfm/olympic-games-medals-19862018?select=olympic_hosts.csv |
+| [olympic_results.csv](../data/olympic_results.csv) | 162804 | 16 | Petro. “Olympic Summer & Winter Games, 1986-2022.” Kaggle, 11 Apr. 2022, https://www.kaggle.com/datasets/piterfm/olympic-games-medals-19862018?select=olympic_results.csv. | https://www.kaggle.com/datasets/piterfm/olympic-games-medals-19862018?select=olympic_results.csv |
+| [olympic_medals.csv](../data/olympic_medals.csv) | 21697 | 12 | Petro. “Olympic Summer & Winter Games, 1986-2022.” Kaggle, 11 Apr. 2022, https://www.kaggle.com/datasets/piterfm/olympic-games-medals-19862018?select=olympic_medals.csv. | https://www.kaggle.com/datasets/piterfm/olympic-games-medals-19862018?select=olympic_medals.csv |
 
 3. Citation, and urls: see above table.
 4. Describe the dataset:

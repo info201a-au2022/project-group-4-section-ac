@@ -1,4 +1,4 @@
-# The `\data` Directory: Project Data Summary 
+# The `\data` Directory: Project Data Summary
 
 In our project, we use the following data files and Application Programming Interfaces:
 
@@ -6,7 +6,10 @@ In our project, we use the following data files and Application Programming Inte
 |Data File Name | Brief Description|
 |---------------| -----------------|
 |[example.cvs](./example.csv) | This file contains temperature data. (See report for details.)
-|[another-file](./filename2.csv) | Description ... 
+|[olympic_athletes.csv](./olympic_athletes.csv) | This file contains data on personal information about olympic athletes (name, short bio, etc.) who participated in the Olympic Summer & Winter Games between 1986 and 2022. |
+|[olympic_hosts.csv](./olympic_hosts.csv) | This file contains data on general information about olympic medalists (Athlete or Team) who won a Gold, Silver, or Bronze medal and participated in the Olympic Summer & Winter Games between 1986 and 2022. |
+|[olympic_medals.csv](./olympic_medals.csv) | This file contains data on olympic host nations (year, city, country, etc) and their participation in the Olympic Summer & Winter Games between 1986 and 2022. |
+|[olympic_results.csv](./olympic_results.csv) | This file contains data on general information on olympic results (Athlete or Team) in the Olympic Summer & Winter Games between 1986 and 2022. |
 
 ## Application Programming Interfaces (API) (TODO: Update/delete for your PROJECT)
 
@@ -19,6 +22,6 @@ Sellers lists and the books that have been reviewed in the New York Times. An ov
 * Edit this `README.md` file and summarize your data files
 * If you are using APIs to access data, summarize them, providing specific information
 * See examples above.
-* Please remember your audience (prospective employers, open source colleagues, TAs, Instructors). Therefore, 
+* Please remember your audience (prospective employers, open source colleagues, TAs, Instructors). Therefore,
 aim for clarity and conciseness.
 * When done, be sure to delete these NOTE sections and the example CSV file (which are intended for you, of course, not your audience!)
