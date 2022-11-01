@@ -48,7 +48,12 @@ An indirect stakeholder would be the professional teams and their athletes. Thei
 If interventions are taken with data and technology, a potential benefit could be live statistics. For example, if the intervention in technology is more updated information systems that can easily load in new data then any viewer would have the most current information. This would benefit any people viewing the datasets because they are seeking and receiving desired information. On the opposite side, if the intervention was adding additional information on players, it could also become an invasion of privacy. For example, an unanticipated consequence could be that because a player had a bad game a report could be linked to their poor performance, in addition to the loss, and harm to their reputation.
 
 # Research Questions
-TODO
+## 1. Which countries have the most/best results (most medals) over the years?
+This question is important because we can see how it is able to show a good general growth of the sport in certain areas. People might want to know which countries to follow styles from.
+## 2. Does being from a certain country help with performance?
+This question helps us determine if external factors behind an athlete have any effect on their performance. Athletes might want to keep these factors in the back of their mind.
+## 3. Which countries have hosted the most Olympics? What do they have in common?
+With this question we would be able to see if the home country has any advantage in the Volleyball matches vs. the countries who are not hosting the game. This might be considered by officials of events to analyze different advantages.
 
 # The Dataset
 TODO
