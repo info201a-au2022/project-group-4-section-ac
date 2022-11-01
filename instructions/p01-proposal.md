@@ -38,14 +38,26 @@ In the world of professional sports, data on even the most popular sports can be
 The current designs for information technology on sport statistics is inaccessible to the average person. Finding data on current and past players of professional/Olympic-level Volleyball can be challenging. Creating a single place for viewing the statistics of Olympic-level Volleyball results can help people in using this data for reports, articles, analysis, etc.
 
 ## Human Values:
-Some human values directly tied to our problem domain are guiding others towards the right action, achievement, and self-direction. By creating an active archive of data of Olympic Volleyball, we record history for current and future generations to view. It recalls past achievements for people to look back on. If for example, a young child wanted to be successful in professional volleyball, they could access the data easily and find individuals who were successful in the field. Then using that data, research that person further for better insight. These values originate from self-fulfillment and this concept that a person has the power to pursue what they want in life. A value tension could be seen with humility. When one achieves their desired endeavors in life, sometimes the ego can clash with humbleness.
+Some human values directly tied to our problem domain are guiding others towards the right action, achievement, and self-direction. By creating an active archive of data of Olympic Volleyball, we record history for current and future generations to view. It recalls past achievements for people to look back on. If for example, a young child wanted to be successful in professional volleyball, they could access the data easily and find individuals who were successful in the field.
+
+> “In the men’s tournament, Brazil are the current defending champions and have won the gold medal three times – a record equalling tally alongside the USA” (Dangrey, 22).
+
+Using data such as this allows other individuals to research that person further for better insight. Then using that data, research that person further for better insight. These values originate from self-fulfillment and this concept that a person has the power to pursue what they want in life. A value tension could be seen with humility. When one achieves their desired endeavors in life, sometimes the ego can clash with humbleness.
 
 ## Stakeholders:
 The direct stakeholders include all volleyball athletes, analyzers, coaches, players, and professional teams. It is assumed they have a general interest in volleyball and desire to continually engage in it. It is also assumed they know how the game operates as well as the different levels of competition. Some of the values they hold include self-fulfillment and action. A desire to learn more and know what is happening within the world of volleyball is their motivation.
+
 An indirect stakeholder would be the professional teams and their athletes. Their career is playing volleyball, so they may never see the statistics written about them; However, it indirectly affects them because the data is written about them.
 
+Countries hosting the olympics are often affect as well. In terms of hosting this event,
+
+> “In the past, hosting an Olympic event was seen as a privilege that brought positive economic and development changes to the host country. Today, the cost of hosting the Olympics has deterred many nations from bidding for that privilege. Some nations have even withdrawn their bids.” (Wee, 18).
+
+Statistically, when we view which countries host the most, we can begin to examine economic trends.
+
 ## Benefits and Harms:
-If interventions are taken with data and technology, a potential benefit could be live statistics. For example, if the intervention in technology is more updated information systems that can easily load in new data then any viewer would have the most current information. This would benefit any people viewing the datasets because they are seeking and receiving desired information. On the opposite side, if the intervention was adding additional information on players, it could also become an invasion of privacy. For example, an unanticipated consequence could be that because a player had a bad game a report could be linked to their poor performance, in addition to the loss, and harm to their reputation.
+If interventions are taken with data and technology, a potential benefit could be live statistics. For example, if the intervention in technology is more updated information systems that can easily load in new data then any viewer would have the most current information. This would benefit any people viewing the datasets because they are seeking and receiving desired information. On the opposite side, if the intervention was adding additional information on players, it could also become an invasion of privacy. For example, an unanticipated consequence could be that because a player had a bad game a report could be linked to their poor performance, in addition to the loss, and harm to their reputation. For instance,
+> “As more data and information gets recorded during a game, it is possible to come up with a detailed analysis of how a team performed, including their specific strengths and weaknesses” (Bird, 8).
 
 # Research Questions
 ## 1. Which countries have the most/best results (most medals) over the years?
@@ -99,7 +111,11 @@ The first of the two main limitations of the project is that we can only collect
 Thank you to Petro, who created all of the extremely detailed, accurate, and interlinked `.csv` files for the _"Olympic Summer & Winter Games, 1986-2022"_ that we are using for the basis of our project.
 
 # References
-- See **Dataset**, Part 2 table for `\data`'s .csv file references.
+- Bird, Marc. “4 Ways Technology Has Changed the World of Volleyball.” VolleyCountry, 28 Jan. 2020, https://volleycountry.com/news/4-ways-technology-has-changed-the-world-of-volleybal.
+- Dangrey. “Olympic Volleyball: Disciplines, Teams, Rules, Balls and More.” Volleyverse, 17 Sept. 2020, https://hub.volleyverse.com/volleyball-tips/olympic-volleyball-disciplines-teams-rules-balls/#:~:text=Olympic%20Volleyball%20Teams,-Since%201988%20.
+- Wee, Rolando Y. “Countries Hosting the Greatest Number of Olympic Games.” WorldAtlas, WorldAtlas, 18 Mar. 2019, https://www.worldatlas.com/articles/countries-hosting-the-greatest-number-of-olympic-games.html.
+
+See **Dataset**, Part 2 table for `\data`'s .csv file references.
 
 # Appendix A: Questions
 - Is there a 1:1 ratio of **research question** to data visual that we will be implementing in later parts of the assignment?
