@@ -84,7 +84,7 @@ Assuming we answered all of our research questions, there are two main implicati
 2. The second implication with our project would be for the average fan. Someone who is just getting into volleyball might want to do research on a specific player and their stats. Or they might be interested in the general trend of popularity of the sport. The average person would be much more comfortable with using or project than trying to scour the internet for the information.
 
 # Limitations
-TODO
+The first of the two main limitations of the project is that we can only collect data that is entered online. Because most of the data addition is done with a program, the data we find is only from what is given to us. We are given the data we are using, not going out and observing the games that go on. Even though we can only use data given to us, we can find the data sets which are the most comprehensive and leave very little out. The second limitation of the project is how far back in volleyball history we can go. There is only so far we can realistically go back without it being too much of a hassle. So, we are only able to realistically obtain the data from “modern” volleyball. We could spend more time digging for the data, however, so we can encompass most of volleyball history.
 
 # Findings
 **Note:** Not for the project proposal; for final report only.
