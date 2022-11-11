@@ -9,8 +9,9 @@ olympic_volleyball_medals <- olympic_medals %>%
   filter((discipline_title == "Volleyball") | (discipline_title == "Beach Volleyball")) %>% 
   select(discipline_title, slug_game, event_gender, medal_type, participant_title, country_name, country_3_letter_code)
 
-# Filter Data
+# TODO: Summary Information Script (B.2 above)
+# groupby() medals
+# calculate and condense data
 
-# Try to create ggplot
-
-# Come up with all extra pretty chart stuff
+# TODO: Aggregate Table Script (B.3 above)
+# make the table
