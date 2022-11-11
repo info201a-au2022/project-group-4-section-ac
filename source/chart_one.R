@@ -1,3 +1,5 @@
+# BAR GRAPH
+
 # Load the tidyverse package
 library(tidyverse)
 

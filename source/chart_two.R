@@ -1,3 +1,5 @@
+# SCATTER PLOT
+
 # Load the tidyverse package
 library(tidyverse)
 
