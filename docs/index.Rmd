@@ -1,6 +1,6 @@
 ---
-title: "Your Project Title"
-author: "project team members"
+title: "Olympic Volleyball Stats Over the Years"
+author: "Katherine Murphy, Harman Zhang, Sabrina Jahed, and Karina Wang"
 date: "1/22/2022"
 output: html_document
 ---
