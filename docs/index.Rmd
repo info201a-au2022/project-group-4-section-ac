@@ -52,3 +52,11 @@ plot(pressure)
 ```
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+
+
+## A TRIAL RUN
+```{r, fig.width = 10, echo=FALSE}
+source("../source/chart_one.R")
+g
+```

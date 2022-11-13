@@ -80,7 +80,8 @@ cummulative_medals_all_data <- cummulative_medals_per_country %>%
 # Try to create ggplot barplot
 
 g <- ggplot(data = cummulative_medals_all_data, aes(x = country_3_letter_code, y = cummulative_medals), na.rm = TRUE) +
-  geom_bar(stat="identity", width=0.5)
+  geom_bar(stat="identity", width=0.5) + 
+  labs(x = "Countries", y = "Total Olympic Volleyball Medals Won", title = "Total Number of Olympic Volleybll Medals Ever Won by Each Country (who has ever won at least one??)")
 g
 
 # Come up with all extra pretty chart stuff
