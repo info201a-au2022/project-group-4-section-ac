@@ -19,8 +19,17 @@ View(olympic_volleyball_medals)
 # filtered out discipline title, participant title
 
 medals_over_years <- olympic_volleyball_medals %>% 
-  select(slug_game, medal_type, country_name, country_3_letter_code) %>% 
+  select(slug_game, country_name, country_3_letter_code) %>% 
   mutate(year_oly = str_sub(slug_game, -4)) %>% 
+  select(-slug_game, -country_name) %>% 
+  mutate(medals_per_year = 1) %>% 
+  group_by(country_3_letter_code, year_oly) %>% 
+  summarize(total_medals = sum(medals_per_year))
+
+  ##############
+  groupbyyear
+  groupbycoutry
+  ifcountry is that and that year then add one 
   
   #### make column for cumulative medals, do this by putting in 
   #### year order and adding one for every medal, account for same year medals
@@ -40,12 +49,13 @@ View(medals_over_years)
 # }
   
 #### put cumulative medals in medals_over_years first
-num_medals <- medals_over_years %>%
-#  select(-slug_game) %>% 
-  group_by(year_oly) %>% 
-  group_by(country_3_letter_code) %>%
+##num_medals <- medals_over_years %>%
+##  group_by(country_3_letter_code) %>% 
+#  group_by(country_3_letter_code) %>%
 #  mutate(cum_medals_total = cumsum(length(medal_type)))
-  summarize(year = year_oly, total_medals = (length(medal_type)))
+##  summarize(year_oly, total_medals = sum(medals_per_year))
+              
+               #(length(country_3_letter_code)))
   
 
   
