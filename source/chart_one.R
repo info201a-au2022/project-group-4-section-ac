@@ -1,6 +1,6 @@
 # BAR GRAPH
 
-# Load the tidyverse package
+# Load packages
 library(tidyverse)
 library(ggplot2)
 
