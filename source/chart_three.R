@@ -1,5 +1,7 @@
 # PIE CHART
-
+install.packages("installr")
+library(installr)
+updateR()
 # Load the tidyverse package
 library(tidyverse)
 library(stringr)
