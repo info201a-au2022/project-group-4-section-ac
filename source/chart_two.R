@@ -34,9 +34,9 @@ medals_over_years <- olympic_volleyball_medals %>%
 
 
   ##############
-  groupbyyear
-  groupbycoutry
-  ifcountry is that and that year then add one 
+  # groupbyyear
+  # groupbycoutry
+  # ifcountry is that and that year then add one 
   
   #### make column for cumulative medals, do this by putting in 
   #### year order and adding one for every medal, account for same year medals
@@ -88,9 +88,12 @@ View(medals_over_years)
 # creating scatterplot
 g <- ggplot(data = medals_over_years, aes(x = year_oly, y = total_medals), 
             na.rm = TRUE) + geom_point()
+
 # use if not rendering
 dev.off() 
 g
+
+
 # geom_point(aes(alpha = 0.3), # useful to turn this down if you have a lot of points in the same area
   #     color = "red",
   #     shape = 3, # I've almost never used shape and advise against it, in general
@@ -98,10 +101,10 @@ g
   #     stroke = 1) + # boldness
 # or 
   
-scatterplot 
-g + geom_jitter(height = 2, width = 2) 
-
-?geom_point()
+# scatterplot - try 
+# g + geom_jitter(height = 2, width = 2) 
+# 
+# ?geom_point()
 
 
 # Come up with all extra pretty chart stuff
