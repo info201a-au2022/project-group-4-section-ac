@@ -25,18 +25,34 @@ View(olympic_volleyball_medals)
   
   pi_chart_data <- olympic_volleyball_medals %>% 
                    select(country_name, medal_type) %>% 
-                   filter(country_input)
+                   filter(country_name == country_input)
    
   
   num_gold <- sum(str_count(pi_chart_data$medal_type, "GOLD"))
   num_silver <- sum(str_count(pi_chart_data$medal_type, "SILVER"))
-  num_gold <- sum(str_count(pi_chart_data$medal_type, "BRONZE"))
+  num_bronze <- sum(str_count(pi_chart_data$medal_type, "BRONZE"))
   country_input
   
+  Medal_Type = c("Gold", "Silver", "Bronze")
+  Medal_Count = c(num_gold, num_silver, num_bronze)
   
-  View(pi_chart_data)
+  plot_data <- data.frame(Medal_Type, Medal_Count)
+  
+#  View(plot_data)
 
 # Try to create ggplot
+  plot <- ggplot(plot_data, aes(x = "", y = Medal_Count, fill = Medal_Type)) +
+                 geom_bar(stat="identity", width = 1, size = 1) +
+                 coord_polar("y", start = 0) +
+                 geom_text(aes(label = ifelse(Medal_Count > 0, Medal_Count, "")),
+                          position = position_stack(vjust = 0.5)) +
+                 labs(title = "Germany's Medals in Volleyball") +
+                 scale_fill_manual(values = c("yellow", "grey", "brown")) +
+    
+    
+                 # Change Later
+                 theme_void()
+  plot
 
 # Come up with all extra pretty chart stuff
   # 
