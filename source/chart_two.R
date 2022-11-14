@@ -18,13 +18,20 @@ View(olympic_volleyball_medals)
 # Filter Data
 # filtered out discipline title, participant title
 
+# filters for year, country code, and medals won that year
 medals_over_years <- olympic_volleyball_medals %>% 
-  select(slug_game, country_name, country_3_letter_code) %>% 
+  # takes which olympics ang country code 
+  select(slug_game, country_3_letter_code) %>% 
+  # creates year won only
   mutate(year_oly = str_sub(slug_game, -4)) %>% 
-  select(-slug_game, -country_name) %>% 
+  # remove location of olympics
+  select(-slug_game) %>% 
+  # create column for each medal won
   mutate(medals_per_year = 1) %>% 
-  group_by(country_3_letter_code, year_oly) %>% 
-  summarize(total_medals = sum(medals_per_year))
+  # grouping by year and medals won in that year
+  group_by(country_3_letter_code, year_oly) %>%
+  summarize(total_medals = sum(medals_per_year)) 
+
 
   ##############
   groupbyyear
@@ -33,9 +40,26 @@ medals_over_years <- olympic_volleyball_medals %>%
   
   #### make column for cumulative medals, do this by putting in 
   #### year order and adding one for every medal, account for same year medals
-  mutate(cum_medals = )
+  
+cumulative_medals <- medals_over_years %>% 
+  group_by(country_3_letter_code, year_oly) %>% 
+  summarize(cum_medals = total_medals + lag(total_medals))
 
-# if (year_oly > )  
+#  mutate(cum_medals = min(year_oly)) %>% 
+#  if (year_oly >= lag(year_oly)) { 
+#    cum_medals = cum_medals + 1 
+#  }
+
+#alt solution
+# cumulative_medals <- medals_over_years %>% 
+#   mutate(cum_medals = ifelse(country_3_letter_code == lag(country_3_letter_code) && year_oly > lag(year_oly), cum_medals = 
+#                                total_medals + lag(total_medals)))  
+#      
+# another
+
+  
+  # min(year_oly)) %>% 
+  
 
 View(medals_over_years)
 
@@ -60,18 +84,21 @@ View(medals_over_years)
 
   
 
-# year x axis, metals received y axis 
-# Try to create ggplot
-scatterplot <- ggplot(data = medals_over_years, mapping = aes(x = year,
-                                                              y = medals))
-
-# try this from demo?
-g + geom_point(aes(alpha = 0.7), # useful to turn this down if you have a lot of points in the same area
-      color = "red",
-      shape = 3, # I've almost never used shape and advise against it, in general
-      size = 10, # relative size
-      stroke = 1) + # boldness
+# year x axis, cumulative metals received y axis 
+# creating scatterplot
+g <- ggplot(data = medals_over_years, aes(x = year_oly, y = total_medals), 
+            na.rm = TRUE) + geom_point()
+# use if not rendering
+dev.off() 
+g
+# geom_point(aes(alpha = 0.3), # useful to turn this down if you have a lot of points in the same area
+  #     color = "red",
+  #     shape = 3, # I've almost never used shape and advise against it, in general
+  #     size = 10, # relative size
+  #     stroke = 1) + # boldness
 # or 
+  
+scatterplot 
 g + geom_jitter(height = 2, width = 2) 
 
 ?geom_point()
