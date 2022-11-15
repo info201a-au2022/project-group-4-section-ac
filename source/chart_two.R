@@ -1,4 +1,4 @@
-# SCATTER PLOT
+# LINE/POINT GRAPH
 
 # Load the tidyverse package
 library("tidyverse")
@@ -9,14 +9,13 @@ library("stringr")
 #           [Session -> Set Working Directory -> To Source File Location]
 olympic_medals <- read.csv("../data/olympic_medals.csv")
 
+# dataframe for discipline, year, gender, medal type, participant,
+# country name, and country code
 olympic_volleyball_medals <- olympic_medals %>% 
   filter((discipline_title == "Volleyball") | (discipline_title == "Beach Volleyball")) %>% 
   select(discipline_title, slug_game, event_gender, medal_type, participant_title, country_name, country_3_letter_code)
 
 View(olympic_volleyball_medals)
-
-# Filter Data
-# filtered out discipline title, participant title
 
 # filters for year, country code, and medals won that year
 medals_over_years <- olympic_volleyball_medals %>% 
@@ -32,81 +31,19 @@ medals_over_years <- olympic_volleyball_medals %>%
   group_by(country_3_letter_code, year_oly) %>%
   summarize(total_medals = sum(medals_per_year)) 
 
-
-  ##############
-  # groupbyyear
-  # groupbycoutry
-  # ifcountry is that and that year then add one 
-  
-  #### make column for cumulative medals, do this by putting in 
-  #### year order and adding one for every medal, account for same year medals
-  
-cumulative_medals <- medals_over_years %>% 
-  group_by(country_3_letter_code, year_oly) %>% 
-  summarize(cum_medals = total_medals + lag(total_medals))
-
-#  mutate(cum_medals = min(year_oly)) %>% 
-#  if (year_oly >= lag(year_oly)) { 
-#    cum_medals = cum_medals + 1 
-#  }
-
-#alt solution
-# cumulative_medals <- medals_over_years %>% 
-#   mutate(cum_medals = ifelse(country_3_letter_code == lag(country_3_letter_code) && year_oly > lag(year_oly), cum_medals = 
-#                                total_medals + lag(total_medals)))  
-#      
-# another
-
-  
-  # min(year_oly)) %>% 
-  
-
 View(medals_over_years)
 
-# chosen <- "ROC"
-
-# given_country <- medals_over_years$country_3_letter_code
-
-# num_medals() <- function(given_country) {
-#   medal_count <- sum(str_count(given_country), chosen)
-#   return(medal_count)
-# }
-  
-#### put cumulative medals in medals_over_years first
-##num_medals <- medals_over_years %>%
-##  group_by(country_3_letter_code) %>% 
-#  group_by(country_3_letter_code) %>%
-#  mutate(cum_medals_total = cumsum(length(medal_type)))
-##  summarize(year_oly, total_medals = sum(medals_per_year))
-              
-               #(length(country_3_letter_code)))
-  
-
-  
+# dataframe for only one country USA
+chosen_country <- medals_over_years %>% 
+  filter(country_3_letter_code == "USA")
 
 # year x axis, cumulative metals received y axis 
-# creating scatterplot
-g <- ggplot(data = medals_over_years, aes(x = year_oly, y = total_medals), 
-            na.rm = TRUE) + geom_point()
-
-# use if not rendering
-dev.off() 
+# creating line graph for USA
+g <- ggplot(data = chosen_country, aes(x = year_oly, y = total_medals, group = 1), 
+            na.rm = TRUE) + geom_line() + geom_point()
 g
-
-
-# geom_point(aes(alpha = 0.3), # useful to turn this down if you have a lot of points in the same area
-  #     color = "red",
-  #     shape = 3, # I've almost never used shape and advise against it, in general
-  #     size = 10, # relative size
-  #     stroke = 1) + # boldness
-# or 
-  
-# scatterplot - try 
-# g + geom_jitter(height = 2, width = 2) 
-# 
-# ?geom_point()
-
-
-# Come up with all extra pretty chart stuff
-
+# line graph for all the countries 
+f <- ggplot(data = medals_over_years, aes(x = year_oly, y = total_medals, group = 1), 
+            na.rm = TRUE) + geom_line(aes(color = country_3_letter_code))
+f
 
