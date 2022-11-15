@@ -18,15 +18,7 @@ source("../source/summary_values.R")
 answer
 ```
 
-number_winner_countries: `r answer[1]`
-
-avg_indoor_medals_won: `r answer[2]`
-
-avg_beach_medals_won: `r answer[3]`
-
-max_indoor_medals_won: `r answer[4]`
-
-max_beach_medals_won: `r answer[5]`
+We have analyzed the data of Olympic medals won in Indoor and Beach Volleyball since 1986. During this analysis, we have come across some interesting values. First of all, there are many countries in the world, but only `r answer[1]` of them have won a medal in either Indoor or Beach Volleyball. Of these `r answer[1]` countries who have won these medals, the highest cumulative number of medals a country has ever won in Indoor Volleyball (as of the most recent Olympic game recorded in our data) is `r answer[4]`. Whereas, the highest cumulative number of medals medals a country has ever won in Beach Volleyball (as of the most recent Olympic game recorded in our data) is `r answer[5]`. Additionally, of these `r answer[1]` countries who have won these medals, the average number of medals a country wins in Indoor Volleyball is `r answer[2]`. Comparatively, the average number of medals a country wins in Beach Volleyball is `r answer[3]`. As you can tell, if a country has won a medal in Volleyball in the Olympics, it is equally likely that a country has won that medal in either Indoor or Beach Volleyball.
 
 ## Aggregate Table
 ```{r, echo = FALSE, message = FALSE, results = 'asis'}
@@ -39,21 +31,25 @@ We included this table because we wanted to be able to view the trend in differe
 ## CHART 1 -- A Bar Chart Data Visualization
 
 ```{r, fig.width = 10, echo = FALSE, message = FALSE}
-source("../source/chart_one.R")
+source("../source/charts/chart_one.R")
 g
 ```
 
-We included this bar chart because it demonstrates the total number of volleyball medals that every country has received in every Olympics (since 1964). In doing so, we are able to reveal **trends between certain countries.** We can see which countries have _dominated the sport throughout history._ We are also able to see, through exclusion, which countries have never been able to compete at the world-level in volleyball, as they have won 0 medals in the sport (see in chart by not having a column). Some notable observations from the bar graph include that the country who has won the most Olympic medals in volleyball was Brazil, at 37. The USA was a close second at 33 medals.
+We included this bar chart because it demonstrates the total number of volleyball medals that every country has received in every Olympics (since 1986). In doing so, we are able to reveal **trends between certain countries.** We can see which countries have _dominated the sport throughout history._ We are also able to see, through exclusion, which countries have never been able to compete at the world-level in volleyball, as they have won 0 medals in the sport (see in chart by not having a column). Some notable observations from the bar graph include that the country who has won the most Olympic medals in volleyball was Brazil, at 37. The USA was a close second at 33 medals.
 
 ## CHART 2 -- A Line Graph Data Visualization
 
 ```{r, echo = FALSE, message = FALSE}
-source("../source/chart_two.R")
+source("../source/charts/chart_two.R")
 g
 ```  
 
-We included this chart because it demonstrates the number of medals the USA has received in every Olympics since 1964. It reveals trends among certain years within the country. We can see how certain countries have _better overall results than others over time._ We can also see how a country’s athletes **improved/declined** in each Olympics. Some notable observations from the chart include the most number of medals won in a single Olympics was seven by Brazil in 2000, some countries received medals only once, the USA has received medals in the most Olympics, and only thirty-one countries have ever placed. 
+We included this chart because it demonstrates the number of medals the USA has received in every Olympics since 1984. It reveals trends among certain years within the country. We can see how certain countries have _better overall results than others over time._ We can also see how a country’s athletes **improved/declined** in each Olympics. Some notable observations from the chart include the most number of medals won in a single Olympics by the USA was in 2006, when they received 6 medals. In some years the USA never received a medal, but for the most part, the USA has received medals in the majority of the Olympics they've been in. 
 
 ## CHART 3 -- A Pie Chart Data Visualization
+```{r, echo = FALSE, message = FALSE}
+source("../source/charts/chart_three.R")
+plot
+``` 
 
-TODO
+The visualization above allows for an easy to digest form of a country’s Volleyball and Beach-Volleyball medal distribution across all of the years they have participated in the Olympics. By _medal distribution_, we are referring to the number of *Gold, Silver, and Bronze medals* that they have won. With the chart, the viewer is able to get a clear understanding of the results a country produces as well as their performance as a whole in the discipline. I chose to visualize the medal distribution of Germany just as an example. Germany is pretty middle of the pack when it comes to volleyball performance. They have earned a decent amount of Gold and Bronze medals; which means they are not at the bottom when it comes to Volleyball. However, with how many Olympic games there have been, other countries are definitely out performing Germany as of the current date. 
