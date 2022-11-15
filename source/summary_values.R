@@ -2,6 +2,7 @@
 
 # Load the tidyverse package
 library(tidyverse)
+library("lintr")
 
 # Remember: if not working, do the following in your top bar in RStudios...
 #           [Session -> Set Working Directory -> To Source File Location]
@@ -81,3 +82,5 @@ max_beach_medals_won <- max(cummulative_medals_Indoor_Beach$cummulative_medals_B
 
 # FINAL ANSWER
 answer <- c(number_winner_countries, avg_indoor_medals_won, avg_beach_medals_won, max_indoor_medals_won, max_beach_medals_won)
+
+# lint("summary_values.R")

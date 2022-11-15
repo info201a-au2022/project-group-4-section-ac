@@ -1,5 +1,6 @@
 # Load the tidyverse package
 library(tidyverse)
+library("lintr")
 
 # Remember: if not working, do the following in your top bar in RStudios...
 #           [Session -> Set Working Directory -> To Source File Location]
@@ -40,4 +41,6 @@ cummulative_medals_Indoor_Beach <- cummulative_medals_per_country_Indoor %>%
 
 # replace all NA values with 0
 cummulative_medals_Indoor_Beach[is.na(cummulative_medals_Indoor_Beach)] = 0
+
+# lint("summary_table.R")
 
