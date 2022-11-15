@@ -1,62 +1,59 @@
 ---
 title: "Olympic Volleyball Stats Over the Years"
+subtitle: "P02: Exploratory Data Analysis"
 author: "Katherine Murphy, Harman Zhang, Sabrina Jahed, and Karina Wang"
 date: "1/22/2022"
 output: html_document
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+## Dynamic Paragraph
+```{r, include=FALSE, echo = FALSE, message = FALSE}
+source("../source/summary_values.R")
+# number_winner_countries: answer[1]
+# avg_indoor_medals_won: answer[2]
+# avg_beach_medals_won: answer[3]
+# max_indoor_medals_won: answer[4]
+# max_beach_medals_won: answer[5]
+
+answer
 ```
 
-## What is this file for?
+number_winner_countries: `r answer[1]`
 
-* This file will eventually become your project report for **P02: Exploratory Data Analysis**. Specifically, you will write rmarkdown to report your exploratory data analysis.
+avg_indoor_medals_won: `r answer[2]`
 
-* Please see Canvas for more details.
+avg_beach_medals_won: `r answer[3]`
 
-## ACCESSING THE /source DIRECTORY
-### Example 1: Source some code and run a function
-```{r}
-# Example 1: Note relative path, which can be read: Up one
-# directory(..), down into source (/source), and 
-# then "source" an R file (data_access.R)
-source("../source/data_access.R")
-data_access_test()
+max_indoor_medals_won: `r answer[4]`
+
+max_beach_medals_won: `r answer[5]`
+
+## Aggregate Table
+```{r, echo = FALSE, message = FALSE, results = 'asis'}
+library(knitr)
+source("../source/summary_table.R")
+kable(cummulative_medals_Indoor_Beach, col.names = c("Country", "Indoor Volleyball Medals Won", "Beach Volleyball Medals Won"), caption = "Olympic Indoor and Beach Volleyball Medals Won by Country", align = 'lcc')
 ```
+We included this table because we wanted to be able to view the trend in difference of number of medals won by each country in indoor volleyball versus beach volleyball. This shows trends on which countries are the strongest in either **indoor or beach volleyball** by their results (i.e. winning a medal). It also shows countries that are skilled in both **indoor and beach volleyball.** By being able to view all of this data in one spot allows us to be able to draw these conclusions with more ease about playing styles in different countries.
 
-### Example 2: Initialize a variable and then use it
-```{r}
-# Example 1: This function was "sourced" above
-msg <- data_access_test(" Morgan!")
-```
+## CHART 1 -- A Bar Chart Data Visualization
 
-> `r msg` Hope you have a good day!! 
-
-## ABOUT THIS FILE: 
-
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r cars}
-summary(cars)
-```
-
-## Including Plots
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
-
-
-
-## A TRIAL RUN
 ```{r, fig.width = 10, echo = FALSE, message = FALSE}
 source("../source/chart_one.R")
 g
 ```
+
+We included this bar chart because it demonstrates the total number of volleyball medals that every country has received in every Olympics (since 1964). In doing so, we are able to reveal **trends between certain countries.** We can see which countries have _dominated the sport throughout history._ We are also able to see, through exclusion, which countries have never been able to compete at the world-level in volleyball, as they have won 0 medals in the sport (see in chart by not having a column). Some notable observations from the bar graph include that the country who has won the most Olympic medals in volleyball was Brazil, at 37. The USA was a close second at 33 medals.
+
+## CHART 2 -- A Line Graph Data Visualization
+
+```{r, echo = FALSE, message = FALSE}
+source("../source/chart_two.R")
+g
+```  
+
+We included this chart because it demonstrates the number of medals the USA has received in every Olympics since 1964. It reveals trends among certain years within the country. We can see how certain countries have _better overall results than others over time._ We can also see how a country’s athletes **improved/declined** in each Olympics. Some notable observations from the chart include the most number of medals won in a single Olympics was seven by Brazil in 2000, some countries received medals only once, the USA has received medals in the most Olympics, and only thirty-one countries have ever placed. 
+
+## CHART 3 -- A Pie Chart Data Visualization
+
+TODO

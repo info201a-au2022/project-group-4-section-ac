@@ -15,8 +15,6 @@ olympic_volleyball_medals <- olympic_medals %>%
   filter((discipline_title == "Volleyball") | (discipline_title == "Beach Volleyball")) %>% 
   select(discipline_title, slug_game, event_gender, medal_type, participant_title, country_name, country_3_letter_code)
 
-View(olympic_volleyball_medals)
-
 # filters for year, country code, and medals won that year
 medals_over_years <- olympic_volleyball_medals %>% 
   # takes which olympics ang country code 
@@ -31,8 +29,6 @@ medals_over_years <- olympic_volleyball_medals %>%
   group_by(country_3_letter_code, year_oly) %>%
   summarize(total_medals = sum(medals_per_year)) 
 
-View(medals_over_years)
-
 # dataframe for only one country USA
 chosen_country <- medals_over_years %>% 
   filter(country_3_letter_code == "USA")
@@ -40,10 +36,15 @@ chosen_country <- medals_over_years %>%
 # year x axis, cumulative metals received y axis 
 # creating line graph for USA
 g <- ggplot(data = chosen_country, aes(x = year_oly, y = total_medals, group = 1), 
-            na.rm = TRUE) + geom_line() + geom_point()
-g
+            na.rm = TRUE) + 
+    geom_line() + 
+    geom_point() +
+    labs(x = "Year", 
+         y = "Olympic Volleyball Medals Won", 
+         title = "Number of Olympic Volleyball Medals Won per Year by the USA")
+
 # line graph for all the countries 
 f <- ggplot(data = medals_over_years, aes(x = year_oly, y = total_medals, group = 1), 
             na.rm = TRUE) + geom_line(aes(color = country_3_letter_code))
-f
+
 
