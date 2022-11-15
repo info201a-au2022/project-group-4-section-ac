@@ -1,7 +1,5 @@
 # PIE CHART
-install.packages("installr")
-library(installr)
-updateR()
+
 # Load the tidyverse package
 library(tidyverse)
 library(stringr)
@@ -14,7 +12,7 @@ olympic_medals <- read.csv("../data/olympic_medals.csv")
 olympic_volleyball_medals <- olympic_medals %>% 
   filter((discipline_title == "Volleyball") | (discipline_title == "Beach Volleyball")) %>% 
   select(discipline_title, slug_game, event_gender, medal_type, participant_title, country_name, country_3_letter_code)
-View(olympic_volleyball_medals)
+
 # Filter Data
   # Need just G, S, B metals and the countries
   # Get a specific country's row
@@ -38,8 +36,6 @@ View(olympic_volleyball_medals)
   
   plot_data <- data.frame(Medal_Type, Medal_Count)
   
-#  View(plot_data)
-
 # Try to create ggplot
   plot <- ggplot(plot_data, aes(x = "", y = Medal_Count, fill = Medal_Type)) +
                  geom_bar(stat="identity", width = 1, size = 1) +
@@ -52,7 +48,3 @@ View(olympic_volleyball_medals)
     
                  # Change Later
                  theme_void()
-  plot
-
-# Come up with all extra pretty chart stuff
-  # 
