@@ -4,10 +4,11 @@
 library("tidyverse")
 library("ggplot2")
 library("stringr")
+library("lintr")
 
 # Remember: if not working, do the following in your top bar in RStudios...
 #           [Session -> Set Working Directory -> To Source File Location]
-olympic_medals <- read.csv("../data/olympic_medals.csv")
+olympic_medals <- read.csv("../../data/olympic_medals.csv")
 
 # dataframe for discipline, year, gender, medal type, participant,
 # country name, and country code
@@ -47,4 +48,4 @@ g <- ggplot(data = chosen_country, aes(x = year_oly, y = total_medals, group = 1
 f <- ggplot(data = medals_over_years, aes(x = year_oly, y = total_medals, group = 1), 
             na.rm = TRUE) + geom_line(aes(color = country_3_letter_code))
 
-
+# lint("chart_two.R")

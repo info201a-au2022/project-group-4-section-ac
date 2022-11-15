@@ -3,10 +3,11 @@
 # Load packages
 library(tidyverse)
 library(ggplot2)
+library("lintr")
 
 # Remember: if not working, do the following in your top bar in RStudios...
 #           [Session -> Set Working Directory -> To Source File Location]
-olympic_medals <- read.csv("../data/olympic_medals.csv")
+olympic_medals <- read.csv("../../data/olympic_medals.csv")
 
 olympic_volleyball_medals <- olympic_medals %>% 
   filter((discipline_title == "Volleyball") | (discipline_title == "Beach Volleyball")) %>% 
@@ -90,3 +91,5 @@ g <- ggplot(data = cummulative_medals_all_data, aes(x = country_3_letter_code, y
 # https://ggplot2.tidyverse.org/reference/geom_bar.html
 
 # ABOVE: bar width set to 0.5
+
+# lint("chart_one.R")
