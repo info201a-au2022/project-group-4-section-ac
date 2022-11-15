@@ -22,7 +22,7 @@ This question is important because this can help shape the success of the future
 To address the question, we will compile, organize, and visualize Volleyball data from Olympics Volleyball games to allow the data to be more accessible to those who are unable to do this themselves.
 
 
-We are concerned with how unorganized and scattered professional Volleyball data is, because success in sports is often determined and influenced by sports data, which is often unavailble to the smaller players. To address this concern, we plan to make this data available to the smaller players, giving them the chance to use this data to their advantage.
+We are concerned with how unorganized and scattered professional Volleyball data is, because success in sports is often determined and influenced by sports data, which is often unavailable to the smaller players. To address this concern, we plan to make this data available to the smaller players, giving them the chance to use this data to their advantage.
 
 # Keywords
 1. Olympic Volleyball
@@ -60,12 +60,12 @@ If interventions are taken with data and technology, a potential benefit could b
 > “As more data and information gets recorded during a game, it is possible to come up with a detailed analysis of how a team performed, including their specific strengths and weaknesses” (Bird, 8).
 
 # Research Questions
-## 1. Which countries have the most/best results (most medals) over the years?
+## 1. What are the country’s cumulative sum of the medals when accounting for gender, and discipline?
 This question is important because we can see how it is able to show a good general growth of the sport in certain areas. People might want to know which countries to follow styles from.
-## 2. Does being from a certain country help with performance?
-This question helps us determine if external factors behind an athlete have any effect on their performance. Athletes might want to keep these factors in the back of their mind.
-## 3. Which countries have hosted the most Olympics? What do they have in common?
-With this question we would be able to see if the home country has any advantage in the Volleyball matches vs. the countries who are not hosting the game. This might be considered by officials of events to analyze different advantages.
+## 2. What is the medal winning trend of the USA?
+This question helps us determine if external factors behind an athlete have any effect on their performance. Athletes might want to keep these factors in the back of their mind. We can correlate world/national events or other sports-related training styles to the trends in this graph in an attempt to help ourselves improve.
+## 3. What is the total medal distribution of medals of Germany?
+With this question we would be able to see how Germany is skill-wise in comparison to other top medal-winners. There is a difference between winning all Bronze or all Gold medals, and this might be considered by officials of events to analyze different advantages.
 
 # The Dataset
 1. Our datasets are related to our problem domain because the first one encompasses data on all medals, athletes, and hosts in the Summer and Winter Olympic games from 1986-2002 and the second provides data on all Summer and Winter Olympic medalists from 1896 Athens to Rio 2016. Our project is oriented around Volleyball in the Olympics, so these datasets on sports and medalists at the Olympics relate back to Volleyball which is a sport at the Olympics which athletes win medals in. More specifically, our datasets focus on the following:
