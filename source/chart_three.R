@@ -46,8 +46,8 @@ View(olympic_volleyball_medals)
                  coord_polar("y", start = 0) +
                  geom_text(aes(label = ifelse(Medal_Count > 0, Medal_Count, "")),
                           position = position_stack(vjust = 0.5)) +
-                 labs(title = "Germany's Medals in Volleyball") +
-                 scale_fill_manual(values = c("yellow", "grey", "brown")) +
+                 labs(title = paste(country_input, "'s Medals in Volleyball")) +
+                 scale_fill_manual(values = c("#663300", "#ffff33", "grey")) +
     
     
                  # Change Later
