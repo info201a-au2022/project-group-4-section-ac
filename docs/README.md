@@ -7,14 +7,9 @@ as follows:
 
 |Report | Brief Description|
 |---------------| -----------------|
-|[Project Proposal (FIX ME!)](./xxx) | A brief description of your P1:Project Proposal
-|[Exploratory Data Analysis](./xxx) | A brief description of your exploratory data analyis report
+|[Project Proposal](./p01-proposal.md) | Proposes an analysis of Olympic Volleyball Stats Over the Years.
+|[Exploratory Data Analysis](./index.Rmd) | Analyzes data of Olympic Volleyball Stats Over the Years, reporting our findings back.
 |[Interactive Vizualizaiton](./xxx) | A brief description of your final report. 
-
-
-## DEVELOPER Note 0
-* If the `/docs` directory or the notes below are confusing, please don't worry - We will cover all of the things below in lecture and/or lab.
-* As always, ask your TA or TEAMS if you have questions. 
 
 ## DEVELOPER Note 1
 `/docs`
@@ -32,7 +27,7 @@ as follows:
 
 Where: 
 1. `info-201a-wi22`    is the organization 
-1. `github.io`         is a webserver that GitHub makes available to us
+1. `github.io`         is a web server that GitHub makes available to us
 1. `final-project`     is the repository name 
 1. `xxx`               is your GitHub username 
 1. `index.htlm`        is the document you would like to view
@@ -40,9 +35,4 @@ Where:
 ## DEVELOPER Note 2: IMPORTANT: Setting up your webserver 
 1. You must make your repository *public*. To make it public: Go to your GitHub repository > Settings (top-right) > Change visibility (Danger Zone) > Make Public
 1. You must set the pages source to /docs. To do so: Got your GitHub repository > Pages (bottom-left) > Select "/docs" from the pulldown menu
-1. If you run into trouble, pleaes ask your TA or post on Teams - as usual, it is straigthforward once you know how but can be tricky to figure out the first time.
-
-## DEVELOPER Note 3:  Clear and Concise Documentation
-* Please remember your audience (prospective employers, open source colleagues, TAs, Instructors). Therefore, 
-aim for clarity and conciseness.
-* When done, be sure to delete these NOTE sections and the example CSV file (which are intended for you, of course, not your audience!)
+1. If you run into trouble, please ask your TA or post on Teams - as usual, it is straightforward once you know how but can be tricky to figure out the first time.
