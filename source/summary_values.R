@@ -1,0 +1,1 @@
+# num countries, max/min indoor, max/min outdoor

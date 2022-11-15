@@ -56,7 +56,7 @@ Note that the `echo = FALSE` parameter was added to the code chunk to prevent pr
 
 
 ## A TRIAL RUN
-```{r, fig.width = 10, echo=FALSE}
+```{r, fig.width = 10, echo = FALSE, message = FALSE}
 source("../source/chart_one.R")
 g
 ```
