@@ -33,12 +33,9 @@ ctry_choices <- medals_over_years %>%
 server <- function(input, output) {
   # Harman
   output$chooseCountry <- renderUI({
-    side_bar <- sidebarPanel(
-      selection_list <- olympic_volleyball_medals %>%
+    selection_list <- olympic_volleyball_medals %>%
       select(country_name)
-      selectInput("County", "Select a Country", choices = selection_list)
-    )
-    return(side_bar)
+    selectInput("County", "Select a Country", choices = selection_list)
   })
 
   output$pieChart <- renderPlot({
