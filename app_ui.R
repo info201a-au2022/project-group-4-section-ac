@@ -85,8 +85,7 @@ chart2_panel <- tabPanel(
   # Your `map_sidebar_content`
     sidebarPanel(
     h3("sidebar"),
-    checkboxGroupInput("countryCheck", label = h4("Country"),
-                       choices = ctry_choices, selected = ctry_choices)),
+    uiOutput("ctryChoices")),
   # Your `map_main_content`
     mainPanel(
       plotlyOutput("countryCheck"),

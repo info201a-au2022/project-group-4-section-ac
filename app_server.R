@@ -86,20 +86,31 @@ server <- function(input, output) {
   })
   
   # Sabrina
-    output$mostMedals <- renderText(most_medals)
-    output$countryCheck <- renderPlotly({
-      country_df <- medals_over_years %>% 
-        filter(country_3_letter_code %in% input$countryCheck)
-      f <- ggplot(
-        data = country_df, aes(
-          x = year_oly, y = total_medals,
-          group = 1
-        ),
-        na.rm = TRUE
-      ) +
-        geom_line(aes(color = country_3_letter_code))
-      labs(title = "Medals Earned each Olympic Games") +
-        xlab("Year") + ylab("Medals Earned")
-      return(f)
-    })
+  output$mostMedals <- renderText(most_medals)
+  output$countryCheck <- renderPlotly({
+    country_df <- medals_over_years %>% 
+      filter(country_3_letter_code %in% input$countryCheck)
+    f <- ggplot(
+      data = country_df, aes(
+        x = year_oly, y = total_medals,
+        group = 1
+      ),
+      na.rm = TRUE
+    ) +
+      geom_line(aes(color = country_3_letter_code))
+    labs(title = "Medals Earned each Olympic Games") +
+      xlab("Year") + ylab("Medals Earned")
+    return(f)
+  })
+  
+  output$ctryChoices <- renderUI({
+    choices <- medals_over_years %>% 
+      group_by(country_3_letter_code) %>% 
+      summarize(cumul_medals = sum(total_medals)) %>% 
+      arrange(desc(cumul_medals)) %>% 
+      head(5) %>% 
+      pull(country_3_letter_code)
+    checkboxGroupInput("countryCheck", label = h4("Country"),
+                       choices = ctry_choices, selected = ctry_choices)
+  })
 }
