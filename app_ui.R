@@ -65,6 +65,10 @@ chart1_panel <- tabPanel(
   )
 )
 
+chart2_sidebar_content <- sidebarPanel(
+  uiOutput("ctryChoices")
+)
+
 # Create a variable `intro_panel` that stores a `tabPanel()` for your first page
 # It should include the following:
 chart2_panel <- tabPanel(
@@ -82,14 +86,11 @@ chart2_panel <- tabPanel(
   p(),
   # A `sidebarLayout()` that contains...
   sidebarLayout(
-  # Your `map_sidebar_content`
-    sidebarPanel(
-    h3("sidebar"),
-    uiOutput("ctryChoices")),
-  # Your `map_main_content`
+    # Your `chart2_sidebar_content`
+    chart2_sidebar_content,
+    # Your `map_main_content`
     mainPanel(
-      plotlyOutput("countryCheck"),
-      p("Paragraph description here")
+      plotOutput("countryCheck")
     )
 
   #   

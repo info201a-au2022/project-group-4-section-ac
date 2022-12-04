@@ -6,8 +6,16 @@ source("chart_two.R")
 source("chart_three.R")
 
 # Harman
+<<<<<<< HEAD
 
 # Katherine
+=======
+olympic_medals <- read.csv("../../data/olympic_medals.csv")
+
+olympic_volleyball_medals <- olympic_medals %>%
+  filter((discipline_title == "Volleyball") | (discipline_title == "Beach Volleyball")) %>%
+  select(discipline_title, slug_game, event_gender, medal_type, participant_title, country_name, country_3_letter_code)
+>>>>>>> 7680ea13afe3675bb3dfd77a9237d00899d28848
 
 # Sabrina
 
@@ -18,16 +26,6 @@ most_medals <- medals_over_years %>%
   arrange(desc(cumul_medals)) %>%
   head(1) %>%
   pull(country_3_letter_code)
-
-# ctry_choices <- medals_over_years %>% pull(country_3_letter_code) %>%  unique()
-
-ctry_choices <- medals_over_years %>%
-  group_by(country_3_letter_code) %>%
-  summarize(cumul_medals = sum(total_medals)) %>%
-  arrange(desc(cumul_medals)) %>%
-  head(5) %>%
-  pull(country_3_letter_code)
-
 
 # Start shinyServer
 server <- function(input, output) {
@@ -49,30 +47,34 @@ server <- function(input, output) {
 
   # Sabrina
   output$mostMedals <- renderText(most_medals)
-  output$countryCheck <- renderPlotly({
+  
+  output$countryCheck <- renderPlot({
     country_df <- medals_over_years %>%
-      filter(country_3_letter_code %in% input$countryCheck)
+      filter(country_3_letter_code %in% input$ctryChoices)
     f <- ggplot(
-      data = country_df, aes(
-        x = year_oly, y = total_medals,
-        group = 1
-      ),
-      na.rm = TRUE
-    ) +
-      geom_line(aes(color = country_3_letter_code))
-    labs(title = "Medals Earned each Olympic Games") +
-      xlab("Year") + ylab("Medals Earned")
+      data = country_df, 
+            aes(x = year_oly, y = total_medals, group = input$ctryChoices),
+            na.rm = TRUE) +
+      labs(title = "Medals Earned each Olympic Games") +
+      geom_line(aes(color = input$ctryChoice)) +
+      geom_point() +
+      labs(
+        x = "Year",
+        y = "Medals Earned",
+        title = "Medals Earned each Olympic Games"
+      )
     return(f)
   })
+  # geom_line(aes(color = country_3_letter_code)) +
 
   output$ctryChoices <- renderUI({
-    choices <- medals_over_years %>%
+    new_choices <- medals_over_years %>%
       group_by(country_3_letter_code) %>%
       summarize(cumul_medals = sum(total_medals)) %>%
       arrange(desc(cumul_medals)) %>%
       head(5) %>%
       pull(country_3_letter_code)
-    checkboxGroupInput("countryCheck", label = h4("Country"),
-                       choices = ctry_choices, selected = ctry_choices)
+    checkboxGroupInput("countryCheck", label = "Countries",
+                       choices = new_choices, selected = new_choices)
   })
 }
