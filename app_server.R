@@ -1,12 +1,12 @@
 # server.R
 library(dplyr)
 
-source('./source/charts/chart_one.R')
-source('./source/charts/chart_two.R')
-source('./source/charts/chart_three.R')
+#source('./source/charts/chart_one.R')
+#source('./source/charts/chart_two.R')
+#source('./source/charts/chart_three.R')
 
 # Harman
-olympic_medals <- read.csv("../../data/olympic_medals.csv")
+olympic_medals <- read.csv("data/olympic_medals.csv")
 
 olympic_volleyball_medals <- olympic_medals %>% 
   filter((discipline_title == "Volleyball") | (discipline_title == "Beach Volleyball")) %>% 
@@ -27,7 +27,7 @@ server <- function(input, output) {
     })
     
     distPlot <- reactive({
-      country_input <- selection_list
+      country_input <- input$selection_list
       
       pi_chart_data <- olympic_volleyball_medals %>% 
         select(country_name, medal_type) %>% 
