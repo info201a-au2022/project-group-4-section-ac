@@ -8,8 +8,9 @@ library(lintr)
 
 # Remember: if not working, do the following in your top bar in RStudios...
 #           [Session -> Set Working Directory -> To Source File Location]
-setwd("~/Documents/info201/project-group-4-section-ac/source/charts")
-# setwd("C:/Documents/info201/project-group-4-section-ac/source/charts")
+#setwd("~/Documents/info201/project-group-4-section-ac/source/charts")
+#setwd("C:/Documents/info201/project-group-4-section-ac/source/charts")
+setwd("C:/Users/Harma/Documents/Info201/project-group-4-section-ac/source/charts")
 olympic_medals <- read.csv("../../data/olympic_medals.csv")
 
 olympic_volleyball_medals <- olympic_medals %>% 
@@ -42,7 +43,7 @@ Medal_Count = c(num_gold, num_silver, num_bronze)
 plot_data <- data.frame(Medal_Type, Medal_Count)
   
 # Try to create ggplot
-dis_pie <- ggplot(plot_data, aes(x = "", y = Medal_Count, fill = Medal_Type)) +
+plot <- ggplot(plot_data, aes(x = "", y = Medal_Count, fill = Medal_Type)) +
                geom_bar(stat="identity", width = 1, size = 1) +
                coord_polar("y", start = 0) +
                geom_text(aes(label = ifelse(Medal_Count > 0, Medal_Count, "")),
@@ -57,4 +58,37 @@ dis_pie <- ggplot(plot_data, aes(x = "", y = Medal_Count, fill = Medal_Type)) +
 theme_void()
   
 # lint("chart_three.R")
+
+
+# For the Shiny website
+
+shiny_pie <- function(country.var) {
+  pi_chart_data <- olympic_volleyball_medals %>% 
+    select(country_name, medal_type) %>% 
+    filter(country_name == country.var)
+  
+  
+  num_gold <- sum(str_count(pi_chart_data$medal_type, "GOLD"))
+  num_silver <- sum(str_count(pi_chart_data$medal_type, "SILVER"))
+  num_bronze <- sum(str_count(pi_chart_data$medal_type, "BRONZE"))
+  
+  Medal_Type = c("Gold", "Silver", "Bronze")
+  Medal_Count = c(num_gold, num_silver, num_bronze)
+  
+  plot_data <- data.frame(Medal_Type, Medal_Count)
+  
+  plot <- ggplot(plot_data, aes(x = "", y = Medal_Count, fill = Medal_Type)) +
+    geom_bar(stat="identity", width = 1, size = 1) +
+    coord_polar("y", start = 0) +
+    geom_text(aes(label = ifelse(Medal_Count > 0, Medal_Count, "")),
+              position = position_stack(vjust = 0.5)) +
+    labs(title = paste(country.var, "'s Medals in Volleyball"),
+         caption = paste("Pie chart representing the amount of each medals ",
+                         country.var, " has ever earned.")) +
+    scale_fill_manual(values = c("#663300", "#ffff33", "grey")) +
+    theme_void()
+  
+  return(plot)
+}
+
   

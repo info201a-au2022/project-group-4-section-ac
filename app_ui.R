@@ -101,11 +101,13 @@ chart2_panel <- tabPanel(
 # It should include the following:
 chart3_panel <- tabPanel(
   "Country Medal Distribution",
-  
+
   titlePanel("Olympic Volleyball"),
-  uiOutput("chooseCountry"),
-  # A `sidebarLayout()` that contains...
-  plotOutput("pieChart")
+  sidebarLayout(
+    uiOutput("chooseCountry"),
+    # A `sidebarLayout()` that contains...
+    plotOutput("pieChart")
+  )
   
   # Your `map_sidebar_content`
   
