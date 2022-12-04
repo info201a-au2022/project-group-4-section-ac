@@ -8,7 +8,8 @@ library("lintr")
 
 # Remember: if not working, do the following in your top bar in RStudios...
 #           [Session -> Set Working Directory -> To Source File Location]
-setwd("~/Documents/info201/project-group-4-section-ac/source/charts")
+# setwd("~/Documents/info201/project-group-4-section-ac/source/charts")
+setwd("C:/Documents/info201/project-group-4-section-ac/source/charts")
 olympic_medals <- read.csv("../../data/olympic_medals.csv")
 
 # dataframe for discipline, year, gender, medal type, participant,
