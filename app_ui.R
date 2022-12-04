@@ -33,18 +33,36 @@ intro_panel <- tabPanel(
   )
 )
 
+chart1_sidebar_content <- sidebarPanel(
+  # An input to select variable to map
+  selectInput(
+    "gender",
+    label = "Olympic Volleyball Event Gender to Display",
+    choices = list(
+      "All" = "all",
+      "Womens" = "women",
+      "Mens" = "men"
+    )
+  )
+)
+
+chart1_main_content <- mainPanel(
+  plotOutput("Plot")
+)
+
 # Create a variable `intro_panel` that stores a `tabPanel()` for your first page
 # It should include the following:
 chart1_panel <- tabPanel(
   "Cummulative Medals",
   titlePanel("Olympic Volleyball"),
   # A `sidebarLayout()` that contains...
-  
-  # Your `map_sidebar_content`
-  
-  
-  # Your `map_main_content`
-  
+  sidebarLayout(
+    # Your `map_sidebar_content`
+    chart1_sidebar_content,
+    
+    # Your `chart1_main_content`
+    chart1_main_content
+  )
 )
 
 # Create a variable `intro_panel` that stores a `tabPanel()` for your first page
@@ -52,13 +70,32 @@ chart1_panel <- tabPanel(
 chart2_panel <- tabPanel(
   "Medals per Game",
   titlePanel("Olympic Volleyball"),
+  p("This data visualization is a line graph that represents the annual ",
+  "number of medals the top-five medal-earning teams won at every ",
+  "Olympics. It is important to note that although only five teams are ",
+  "represented here, thirty-two teams have ever placed in the Olympics."),
+  h3("Which country earned the most medals over the years?"),
+  HTML(paste0("The country the most amount of medals earned over the years is ",
+              textOutput("mostMedals", inline = T),
+              ". This line graph visualization shows exactly how many", 
+              " medals each of these top teams earned at every Olympics")),
+  p(),
   # A `sidebarLayout()` that contains...
-  
+  sidebarLayout(
   # Your `map_sidebar_content`
-  
-  
+    sidebarPanel(
+    h3("sidebar"),
+    checkboxGroupInput("countryCheck", label = h4("Country"),
+                       choices = ctry_choices, selected = ctry_choices)),
   # Your `map_main_content`
-  
+    mainPanel(
+      plotlyOutput("countryCheck"),
+      p("Paragraph description here")
+    )
+
+  #   
+    
+  )
 )
 
 # Create a variable `intro_panel` that stores a `tabPanel()` for your first page
