@@ -34,6 +34,7 @@ We included this table because we wanted to be able to view the trend in differe
 source("../source/charts/chart_one.R")
 g
 ```
+_Figure 1_. Total number of Olympic Volleyball medals that have ever been won by each country at the Olympics. Note that if a country is not shown, this means that they have won no Olympic medals in Volleyball.
 
 We included this bar chart because it demonstrates the total number of volleyball medals that every country has received in every Olympics (since 1986). In doing so, we are able to reveal **trends between certain countries.** We can see which countries have _dominated the sport throughout history._ We are also able to see, through exclusion, which countries have never been able to compete at the world-level in volleyball, as they have won 0 medals in the sport (see in chart by not having a column). Some notable observations from the bar graph include that the country who has won the most Olympic medals in volleyball was Brazil, at 37. The USA was a close second at 33 medals.
 
