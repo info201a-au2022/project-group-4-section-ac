@@ -85,6 +85,26 @@ g <- ggplot(data = cummulative_medals_all_data, aes(x = country_3_letter_code, y
   geom_bar(stat="identity", width=0.5) + 
   labs(x = "Countries", y = "Total Olympic Volleyball Medals Won", title = "Total Number of Olympic Volleyball Medals Ever Won by Each Country")
 
+# for the shiny app
+build_bar <- function(gender.var, xvar = "Countries", yvar = "Total Olympic Volleyball Medals Won") {
+  if (gender.var == "all") {
+    g <- ggplot(data = cummulative_medals_all_data, aes(x = country_3_letter_code, y = cummulative_medals), na.rm = TRUE) +
+      geom_bar(stat="identity", width=0.5) + 
+      labs(x = "Countries", y = "Total Olympic Volleyball Medals Won", title = "Total Number of Olympic Volleyball Medals Ever Won by Each Country")
+    return(g)
+  } else if (gender.var == "women") {
+    g <- ggplot(data = cummulative_medals_Women, aes(x = country_3_letter_code, y = cummulative_medals_Women), na.rm = TRUE) +
+      geom_bar(stat="identity", width=0.5) + 
+      labs(x = "Countries", y = "Total Olympic Volleyball Medals Won", title = "Total Number of Olympic Volleyball Medals Ever Won by Each Country")
+    return(g)
+  } else {
+    g <- ggplot(data = cummulative_medals_Men, aes(x = country_3_letter_code, y = cummulative_medals_Men), na.rm = TRUE) +
+      geom_bar(stat="identity", width=0.5) + 
+      labs(x = "Countries", y = "Total Olympic Volleyball Medals Won", title = "Total Number of Olympic Volleyball Medals Ever Won by Each Country")
+    return(g)
+  }
+}
+
 # Come up with all extra pretty chart stuff
 
 # Reference: 

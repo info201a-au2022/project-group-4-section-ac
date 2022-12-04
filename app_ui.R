@@ -33,18 +33,36 @@ intro_panel <- tabPanel(
   )
 )
 
+chart1_sidebar_content <- sidebarPanel(
+  # An input to select variable to map
+  selectInput(
+    "gender",
+    label = "Olympic Volleyball Event Gender to Display",
+    choices = list(
+      "All" = "all",
+      "Womens" = "women",
+      "Mens" = "men"
+    )
+  )
+)
+
+chart1_main_content <- mainPanel(
+  plotOutput("Plot")
+)
+
 # Create a variable `intro_panel` that stores a `tabPanel()` for your first page
 # It should include the following:
 chart1_panel <- tabPanel(
   "Cummulative Medals",
   titlePanel("Olympic Volleyball"),
   # A `sidebarLayout()` that contains...
-  
-  # Your `map_sidebar_content`
-  
-  
-  # Your `map_main_content`
-  
+  sidebarLayout(
+    # Your `map_sidebar_content`
+    chart1_sidebar_content,
+    
+    # Your `chart1_main_content`
+    chart1_main_content
+  )
 )
 
 # Create a variable `intro_panel` that stores a `tabPanel()` for your first page
