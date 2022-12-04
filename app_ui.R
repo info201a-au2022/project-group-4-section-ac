@@ -66,6 +66,7 @@ chart2_panel <- tabPanel(
 chart3_panel <- tabPanel(
   "Country Medal Distribution",
   titlePanel("Olympic Volleyball"),
+  uiOutput("chooseCountry"),
   # A `sidebarLayout()` that contains...
   plotOutput("pieChart")
   

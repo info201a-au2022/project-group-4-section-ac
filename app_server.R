@@ -14,7 +14,7 @@ source('./source/charts/chart_three.R')
 # Start shinyServer
 server <- function(input, output) { 
   # Harman
-    output$chooseState <- renderUI({
+    output$chooseCountry <- renderUI({
       selectInput("County", "Select a Country", choices = selection_list)
     })
     
