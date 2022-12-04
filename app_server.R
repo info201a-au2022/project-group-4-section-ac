@@ -14,6 +14,18 @@ source('./source/charts/chart_three.R')
 # Start shinyServer
 server <- function(input, output) { 
   # Harman
+    output$chooseState <- renderUI({
+      selectInput("County", "Select a Country", choices = selection_list)
+    })
+    
+    distPlot <- reactive({
+      country_input <- selection_list
+      dis_Plot
+    })
+    
+    output$pieChart <- renderPlot({
+      distPlot()
+    })
   
   # Katherine
   

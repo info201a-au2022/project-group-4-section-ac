@@ -67,6 +67,7 @@ chart3_panel <- tabPanel(
   "Country Medal Distribution",
   titlePanel("Olympic Volleyball"),
   # A `sidebarLayout()` that contains...
+  plotOutput("pieChart")
   
   # Your `map_sidebar_content`
   
@@ -80,6 +81,7 @@ chart3_panel <- tabPanel(
 summary_panel <- tabPanel(
   "Summary",
   titlePanel("Olympic Volleyball"),
+  uiOutput("selectInput")
   # A `sidebarLayout()` that contains...
   
   # Your `map_sidebar_content`

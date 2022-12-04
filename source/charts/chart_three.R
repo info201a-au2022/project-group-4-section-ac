@@ -4,10 +4,11 @@
 library(tidyverse)
 library(stringr)
 library(ggplot2)
-library("lintr")
+library(lintr)
 
 # Remember: if not working, do the following in your top bar in RStudios...
 #           [Session -> Set Working Directory -> To Source File Location]
+setwd("C:/Users/Harma/Documents/Info201/project-group-4-section-ac/source/charts")
 olympic_medals <- read.csv("../../data/olympic_medals.csv")
 
 olympic_volleyball_medals <- olympic_medals %>% 
@@ -20,7 +21,9 @@ olympic_volleyball_medals <- olympic_medals %>%
 
 #country_input can be whatever the user wants to input.
 country_input <- "Germany"
-  
+
+selection_list <- olympic_volleyball_medals %>% 
+                  select(country_name)
   
 pi_chart_data <- olympic_volleyball_medals %>% 
                  select(country_name, medal_type) %>% 
@@ -38,12 +41,14 @@ Medal_Count = c(num_gold, num_silver, num_bronze)
 plot_data <- data.frame(Medal_Type, Medal_Count)
   
 # Try to create ggplot
-plot <- ggplot(plot_data, aes(x = "", y = Medal_Count, fill = Medal_Type)) +
+dis_pie <- ggplot(plot_data, aes(x = "", y = Medal_Count, fill = Medal_Type)) +
                geom_bar(stat="identity", width = 1, size = 1) +
                coord_polar("y", start = 0) +
                geom_text(aes(label = ifelse(Medal_Count > 0, Medal_Count, "")),
                         position = position_stack(vjust = 0.5)) +
-               labs(title = paste(country_input, "'s Medals in Volleyball")) +
+               labs(title = paste(country_input, "'s Medals in Volleyball"),
+                    caption = paste("Pie chart representing the amount of each medals ",
+                                    country_input, " has ever earned.")) +
                scale_fill_manual(values = c("#663300", "#ffff33", "grey")) +
   
   
