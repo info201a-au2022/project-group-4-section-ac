@@ -60,11 +60,13 @@ If interventions are taken with data and technology, a potential benefit could b
 > “As more data and information gets recorded during a game, it is possible to come up with a detailed analysis of how a team performed, including their specific strengths and weaknesses” (Bird, 8).
 
 # Research Questions
-## 1. What are the country’s cumulative sum of the medals when accounting for gender, and discipline?
+### 1. What are the country’s cumulative sum of the medals when accounting for gender?
 This question is important because we can see how it is able to show a good general growth of the sport in certain areas. People might want to know which countries to follow styles from.
-## 2. What is the medal winning trend of the USA?
+
+### 2. What is the Olympic Volleyball medal winning trend of the top 5 medal-winning countries?
 This question helps us determine if external factors behind an athlete have any effect on their performance. Athletes might want to keep these factors in the back of their mind. We can correlate world/national events or other sports-related training styles to the trends in this graph in an attempt to help ourselves improve.
-## 3. What is the total medal distribution of medals of Germany?
+
+### 3. What is the total Olympic Volleyball medal distribution for each country that has won a medal?
 With this question we would be able to see how Germany is skill-wise in comparison to other top medal-winners. There is a difference between winning all Bronze or all Gold medals, and this might be considered by officials of events to analyze different advantages.
 
 # The Dataset
