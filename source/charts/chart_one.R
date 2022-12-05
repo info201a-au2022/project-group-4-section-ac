@@ -7,9 +7,9 @@ library("lintr")
 
 # Remember: if not working, do the following in your top bar in RStudios...
 #           [Session -> Set Working Directory -> To Source File Location]
-#setwd("~/Documents/info201/project-group-4-section-ac/source/charts")
-#setwd("C:/Documents/info201/project-group-4-section-ac/source/charts")
-setwd("C:/Users/Harma/Documents/Info201/project-group-4-section-ac/source/charts")
+setwd("~/Documents/info201/project-group-4-section-ac/source/charts")
+# setwd("C:/Documents/info201/project-group-4-section-ac/source/charts")
+# setwd("C:/Users/Harma/Documents/Info201/project-group-4-section-ac/source/charts")
 
 olympic_medals <- read.csv("../../data/olympic_medals.csv")
 
@@ -89,7 +89,7 @@ g <- ggplot(data = cummulative_medals_all_data, aes(x = country_3_letter_code, y
   labs(x = "Countries", y = "Total Olympic Volleyball Medals Won", title = "Total Number of Olympic Volleyball Medals Ever Won by Each Country")
 
 # for the shiny app
-build_bar <- function(gender.var, xvar = "Countries", yvar = "Total Olympic Volleyball Medals Won") {
+build_bar <- function(gender.var) {
   if (gender.var == "all") {
     g <- ggplot(data = cummulative_medals_all_data, aes(x = country_3_letter_code, y = cummulative_medals), na.rm = TRUE) +
       geom_bar(stat="identity", width=0.5) + 

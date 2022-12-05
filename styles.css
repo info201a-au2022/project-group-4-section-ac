@@ -1,0 +1,35 @@
+body {
+  background-color: #e4dac3;
+  font-size: large;
+}
+
+.intro-title {
+  font-size: larger;
+}
+
+.well {
+  background-color: #e6d4a8;
+  border-color: #e6d4a8;
+}
+
+.hi {
+  background-color: blue;
+}
+
+.navbar {
+  background-color: #8AECFF;
+  border-color: #8AECFF;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+  background-color: #3cdfff;
+  border-color: #3cdfff;
+}
+
+.intro {
+  width: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5px;
+}
