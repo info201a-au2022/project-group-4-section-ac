@@ -6,8 +6,6 @@ library(plotly)
 ## INTRO
 ###############################################################################
 
-# Define a variable `map_main_content` that is a `mainPanel()` for your
-# first (map) page that contains the `plotlyOutput()` of your map
 intro_main_content <- mainPanel(
   p(strong("By: Harman Zhang, Katherine Murphy, and Sabrina Jahed")),
   p(),
@@ -34,9 +32,6 @@ intro_main_content <- mainPanel(
   img(src="nishida.png", class = "intro")
 )
 
-
-# Create a variable `intro_panel` that stores a `tabPanel()` for your first page
-# It should include the following:
 intro_panel <- tabPanel(
   "Overview",
   titlePanel("Introduction"),
@@ -48,7 +43,6 @@ intro_panel <- tabPanel(
 ###############################################################################
 
 chart1_sidebar_content <- sidebarPanel(
-  # An input to select variable to map
   selectInput(
     "gender",
     label = "Olympic Volleyball Event Gender to Display",
@@ -88,8 +82,6 @@ chart1_main_content <- mainPanel(
     or female.")
 )
 
-# Create a variable `intro_panel` that stores a `tabPanel()` for your first page
-# It should include the following:
 chart1_panel <- tabPanel(
   "Cummulative Medals",
   titlePanel("Cummulative Olympic Volleyball Medals per Country by Gender"),
@@ -128,8 +120,6 @@ chart2_main_content <- mainPanel(
   p(em("Figure 2."), " Olympic volleyball medals won per year (that there was an Olympic game) by each country.")
 )
 
-# Create a variable `intro_panel` that stores a `tabPanel()` for your first page
-# It should include the following:
 chart2_panel <- tabPanel(
   "Medals per Game",
   titlePanel("Medal Winning Trends of Countries over Time per Olympic Game"),
@@ -173,8 +163,6 @@ chart3_main_content <- mainPanel(
     Volleyball medals this country has ever earned.")
 )
 
-# Create a variable `intro_panel` that stores a `tabPanel()` for your first page
-# It should include the following:
 chart3_panel <- tabPanel(
   "Country Medal Distribution",
   titlePanel("Total Olympic Volleyball Medal Distribution per Country"),
@@ -193,15 +181,12 @@ report_main_content <- mainPanel(
   includeMarkdown("./docs/display-report.Rmd")
 )
 
-# Create a variable `intro_panel` that stores a `tabPanel()` for your first page
-# It should include the following:
 report_panel <- tabPanel(
   "Final Report",
   report_main_content
 )
 
-# Define a variable `ui` storing a `navbarPage()` element containing
-# your two pages defined above
+# Define a variable `ui` containing the pages defined above
 ui <- fluidPage(
         includeCSS("styles.css"),
         navbarPage(

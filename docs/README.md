@@ -9,7 +9,7 @@ as follows:
 |---------------| -----------------|
 |[Project Proposal](./p01-proposal.md) | Proposes an analysis of Olympic Volleyball Stats Over the Years.
 |[Exploratory Data Analysis](./index.Rmd) | Analyzes data of Olympic Volleyball Stats Over the Years, reporting our findings back.
-|[Interactive Vizualizaiton](./xxx) | A brief description of your final report. 
+|[Interactive Vizualizaiton](./xxx) | Analyzes data of Olympic Volleyball Stats Over the Years in shiny, reporting our findings back.
 
 ## Notes:
 * Can view exploratory Data Analysis here: `https://info201a-au2022.github.io/project-group-4-section-ac/index.html`
