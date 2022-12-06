@@ -1,28 +1,21 @@
 # server.R
-library(dplyr)
+library(tidyverse)
+library(shiny)
 
 source("source/charts/chart_one.R")
-source("chart_two.R")
-source("chart_three.R")
+source("source/charts/chart_two.R")
+source("source/charts/chart_three.R")
 
 ###############################################################################
 ## CHART 2
 ###############################################################################
+
 new_choices <- medals_over_years %>%
   group_by(country_3_letter_code) %>%
   summarize(cumul_medals = sum(total_medals)) %>%
   arrange(desc(cumul_medals)) %>%
   head(5) %>%
   pull(country_3_letter_code)
-
-###############################################################################
-## CHART 3
-###############################################################################
-olympic_medals <- read.csv("../../data/olympic_medals.csv")
-
-olympic_volleyball_medals <- olympic_medals %>%
-  filter((discipline_title == "Volleyball") | (discipline_title == "Beach Volleyball")) %>%
-  select(discipline_title, slug_game, event_gender, medal_type, participant_title, country_name, country_3_letter_code)
 
 ###############################################################################
 ## SUMMARY

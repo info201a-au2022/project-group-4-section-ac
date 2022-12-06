@@ -8,10 +8,10 @@ library(lintr)
 
 # Remember: if not working, do the following in your top bar in RStudios...
 #           [Session -> Set Working Directory -> To Source File Location]
-setwd("~/Documents/info201/project-group-4-section-ac/source/charts")
+# setwd("~/Documents/info201/project-group-4-section-ac/source/charts")
 # setwd("C:/Documents/info201/project-group-4-section-ac/source/charts")
 # setwd("C:/Users/Harma/Documents/Info201/project-group-4-section-ac/source/charts")
-olympic_medals <- read.csv("../../data/olympic_medals.csv")
+olympic_medals <- read.csv("data/olympic_medals.csv")
 
 olympic_volleyball_medals <- olympic_medals %>% 
   filter((discipline_title == "Volleyball") | (discipline_title == "Beach Volleyball")) %>% 
@@ -63,7 +63,7 @@ theme_void()
 shiny_pie <- function(country.var) {
   pi_chart_data <- olympic_volleyball_medals %>% 
     select(country_name, medal_type) %>% 
-    filter(country_name == country.var)
+    filter(country_name %in% country.var)
   
   
   num_gold <- sum(str_count(pi_chart_data$medal_type, "GOLD"))
