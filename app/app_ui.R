@@ -54,23 +54,7 @@ chart1_sidebar_content <- sidebarPanel(
   ),
   h4("Question:"),
   p("What are the country’s cumulative sum of the medals when accounting for 
-    gender?"),
-  h4("Takeaways:"),
-  p("This chart shows us how well a country is able to perform under different 
-    categories of Volleyball. We take a look specifically at the difference 
-    between the gender of the sport. Our chart just looks at the total number 
-    of medals, all inclusive, that a country has earned based on the gender 
-    (or the genders added up together). Being able to look at how well a gender 
-    can perform is not actually as straightforward as one may think."),
-  h4("Broader Implications:"),
-  p("For the majority of countries that compete, their standing in medals stays 
-    relatively the same. For example, Brazil, in every category, stays at the 
-    top of the rankings for the medal count. Same goes for the USA too. No 
-    matter how we try to tally the medals, those two are on top. However, this 
-    is not the case for every country. Norway, for example, has no medals in 
-    women's volleyball but has won some in the men's division. Looking at it 
-    from a broader perspective, this tell us that Norway might not putting as 
-    much effort into their women's team than compared to other countries.")
+    gender?")
 )
 
 chart1_main_content <- mainPanel(
@@ -99,20 +83,7 @@ chart2_sidebar_content <- sidebarPanel(
   uiOutput("countryChoices"),
   h4("Question:"),
   p("What is the Olympic Volleyball medal winning trend of the top 5 medal-winning 
-    countries?"),
-  h4("Takeaways:"),
-  p("This data shows which years each country has won and how many medals they 
-    won in that year. The first takeaway is that although Brazil earned more 
-    cumulative medals, The United States placed in more of the Olympic games. 
-    Brazil earned a total of thirty-seven medals while The United States earned 
-    a total of thirty-three medals."),
-  h4("Broader Implications:"),
-  p("From this data visualization we can see that Brazil and The United States 
-    were very successful is later years starting the year 1984. The third top 
-    performing country is the Soviet Union, which placed from 1964 up until 1988 
-    because they broke into several countries in 1991. This data reveals larger 
-    social and economic situations which directly reflects in a country’s 
-    performance in the Olympics.")
+    countries?")
 )
 
 chart2_main_content <- mainPanel(
@@ -137,7 +108,63 @@ chart3_sidebar_content <- sidebarPanel(
   uiOutput("chooseCountry"),
   h4("Question:"),
   p("What is the total Olympic Volleyball medal distribution for each country 
-    that has won a medal?"),
+    that has won a medal?")
+)
+
+chart3_main_content <- mainPanel(
+  plotOutput("pieChart"),
+  p(em("Figure 3."), " The pie chart representing the amount of each Olympic 
+    Volleyball medals this country has ever earned.")
+)
+
+chart3_panel <- tabPanel(
+  "Country Medal Distribution",
+  titlePanel("Total Olympic Volleyball Medal Distribution per Country"),
+  sidebarLayout(
+    chart3_sidebar_content,
+    chart3_main_content
+  )
+)
+
+###############################################################################
+## SUMMARY
+###############################################################################
+
+summary_main_content <- mainPanel(
+  h3("Cumulative Medals Visualization"),
+  h4("Takeaways:"),
+  p("This chart shows us how well a country is able to perform under different 
+    categories of Volleyball. We take a look specifically at the difference 
+    between the gender of the sport. Our chart just looks at the total number 
+    of medals, all inclusive, that a country has earned based on the gender 
+    (or the genders added up together). Being able to look at how well a gender 
+    can perform is not actually as straightforward as one may think."),
+  h4("Broader Implications:"),
+  p("For the majority of countries that compete, their standing in medals stays 
+    relatively the same. For example, Brazil, in every category, stays at the 
+    top of the rankings for the medal count. Same goes for the USA too. No 
+    matter how we try to tally the medals, those two are on top. However, this 
+    is not the case for every country. Norway, for example, has no medals in 
+    women's volleyball but has won some in the men's division. Looking at it 
+    from a broader perspective, this tell us that Norway might not putting as 
+    much effort into their women's team than compared to other countries."),
+  p(),
+  h3("Medals per Game Visualization"),
+  h4("Takeaways:"),
+  p("This data shows which years each country has won and how many medals they 
+    won in that year. The first takeaway is that although Brazil earned more 
+    cumulative medals, The United States placed in more of the Olympic games. 
+    Brazil earned a total of thirty-seven medals while The United States earned 
+    a total of thirty-three medals."),
+  h4("Broader Implications:"),
+  p("From this data visualization we can see that Brazil and The United States 
+    were very successful is later years starting the year 1984. The third top 
+    performing country is the Soviet Union, which placed from 1964 up until 1988 
+    because they broke into several countries in 1991. This data reveals larger 
+    social and economic situations which directly reflects in a country’s 
+    performance in the Olympics."),
+  p(),
+  h3("Country Medal Distribution Visualization"),
   h4("Takeaways:"),
   p("For the Pie chart, you are able to look closer at a specific country. What 
     someone would be able to gather from this visualization would be the 
@@ -157,19 +184,10 @@ chart3_sidebar_content <- sidebarPanel(
     have won more gold medals.")
 )
 
-chart3_main_content <- mainPanel(
-  plotOutput("pieChart"),
-  p(em("Figure 3."), " The pie chart representing the amount of each Olympic 
-    Volleyball medals this country has ever earned.")
-)
-
-chart3_panel <- tabPanel(
-  "Country Medal Distribution",
-  titlePanel("Total Olympic Volleyball Medal Distribution per Country"),
-  sidebarLayout(
-    chart3_sidebar_content,
-    chart3_main_content
-  )
+summary_panel <- tabPanel(
+  "Takeaways",
+  titlePanel("Main Takeaways"),
+  summary_main_content
 )
 
 ###############################################################################
@@ -194,6 +212,7 @@ ui <- fluidPage(
         chart1_panel,
         chart2_panel,
         chart3_panel,
+        summary_panel,
         report_panel
       ),
       includeCSS("styles.css")
