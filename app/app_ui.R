@@ -29,7 +29,12 @@ intro_main_content <- mainPanel(
     Brazil, The United States, The Soviet Union, China, and Japan. Brazil being 
     the overall top-medalling country, Brazil also received the most amount of 
     beach and indoor volleyball medals in a single year."),
-  img(src="nishida.png", class = "intro")
+  img(src="nishida.png", class = "intro"),
+  p("The research questions we decided to explore were: What is a country’s 
+  cumulative sum of the medals when accounting for gender? What is the Olympic 
+  volleyball medal-winning trends of the top five medal-winning countries? What 
+  is the total Olympic medal distribution for each country that has won a medal? 
+  We address these questions in the following interactive data visualizations.")
 )
 
 intro_panel <- tabPanel(
