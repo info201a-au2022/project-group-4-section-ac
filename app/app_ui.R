@@ -178,7 +178,7 @@ chart3_panel <- tabPanel(
 
 report_main_content <- mainPanel(
   img(src="kerriwalsh.png", class = "intro"),
-  includeMarkdown("../docs/display-report.Rmd")
+  includeHTML("display-report.html")
 )
 
 report_panel <- tabPanel(
@@ -188,7 +188,6 @@ report_panel <- tabPanel(
 
 # Define a variable `ui` containing the pages defined above
 ui <- fluidPage(
-        includeCSS("styles.css"),
         navbarPage(
         "Olympic Volleyball",
         intro_panel,
@@ -196,6 +195,7 @@ ui <- fluidPage(
         chart2_panel,
         chart3_panel,
         report_panel
-      )
+      ),
+      includeCSS("styles.css")
 )
   
