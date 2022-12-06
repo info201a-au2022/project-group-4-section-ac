@@ -2,7 +2,7 @@
 library(tidyverse)
 library(shiny)
 
-olympic_medals <- read.csv("data/olympic_medals.csv")
+olympic_medals <- read.csv("../data/olympic_medals.csv")
 
 ###############################################################################
 ## CHART 1

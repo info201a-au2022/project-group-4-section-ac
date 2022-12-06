@@ -178,7 +178,7 @@ chart3_panel <- tabPanel(
 
 report_main_content <- mainPanel(
   img(src="kerriwalsh.png", class = "intro"),
-  includeMarkdown("./docs/display-report.Rmd")
+  includeMarkdown("../docs/display-report.Rmd")
 )
 
 report_panel <- tabPanel(
