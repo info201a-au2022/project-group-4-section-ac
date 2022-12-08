@@ -1,6 +1,8 @@
 # server.R
-library(tidyverse)
 library(shiny)
+library(ggplot2)
+library(plotly)
+library(tidyverse)
 
 olympic_medals <- read.csv("data/olympic_medals.csv")
 
@@ -204,7 +206,7 @@ server <- function(input, output) {
   #############################################################################
   ## CHART 1
   #############################################################################
-  output$Plot <- renderPlot({
+  output$plot <- renderPlot({
     return(build_bar(input$gender))
   })
   

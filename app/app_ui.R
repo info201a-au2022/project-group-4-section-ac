@@ -1,12 +1,16 @@
 # ui.R
 library(shiny)
+library(ggplot2)
 library(plotly)
+library(tidyverse)
 
 ###############################################################################
 ## INTRO
 ###############################################################################
 
-intro_main_content <- mainPanel(
+intro_panel <- tabPanel(
+  "Overview",
+  titlePanel("Introduction"),
   p(strong("By: Harman Zhang, Katherine Murphy, and Sabrina Jahed")),
   p(),
   p("The Olympic games are for determining the athelticism of different countries 
@@ -34,13 +38,8 @@ intro_main_content <- mainPanel(
   cumulative sum of the medals when accounting for gender? What is the Olympic 
   volleyball medal-winning trends of the top five medal-winning countries? What 
   is the total Olympic medal distribution for each country that has won a medal? 
-  We address these questions in the following interactive data visualizations.")
-)
-
-intro_panel <- tabPanel(
-  "Overview",
-  titlePanel("Introduction"),
-  intro_main_content
+  We address these questions in the following interactive data visualizations."),
+  class="article-formatting"
 )
 
 ###############################################################################
@@ -59,11 +58,20 @@ chart1_sidebar_content <- sidebarPanel(
   ),
   h4("Question:"),
   p("What are the country’s cumulative sum of the medals when accounting for 
-    gender?")
+    gender?"),
+  p("The purpose of this data visualization is to be able to take a general look 
+    at the history of Olympic Volleyball for each country. By tallying how many 
+    medals each country has won in the sport, we are able to see a general trend 
+    of the success of these countries at the sport. When taking a slightly 
+    narrower lens of Olympic Volleyball by focusing on gender (the Olympics 
+    divide volleyball events into 2 categories based on gender which they define 
+    as men and women), we are also able to see the success of different 
+    countries by gender, which can allow us further investigate different aspects 
+    of Olympic Volleyball.")
 )
 
 chart1_main_content <- mainPanel(
-  plotOutput("Plot"),
+  plotOutput("plot"),
   p(em("Figure 1."), " Total number of mens, womens, or all Olympic Volleyball 
     medals that have ever been won by each country at the Olympics. Note that if 
     a country is not shown, this means that they have won no Olympic medals in 
@@ -88,7 +96,14 @@ chart2_sidebar_content <- sidebarPanel(
   uiOutput("countryChoices"),
   h4("Question:"),
   p("What is the Olympic Volleyball medal winning trend of the top 5 medal-winning 
-    countries?")
+    countries?"),
+  p("The purpose of this data visualization is to further break down how many 
+    medals were won by each country in every Olympics since 1964. This will make 
+    the years that each country was successful in volleyball more apparent. This 
+    will in turn help viewers know which teams specifically to examine since 
+    national teams tend to change players over time. By selecting the most 
+    successfully-placing teams, we can focus more on the best athletes and 
+    teams.")
 )
 
 chart2_main_content <- mainPanel(
@@ -113,7 +128,14 @@ chart3_sidebar_content <- sidebarPanel(
   uiOutput("chooseCountry"),
   h4("Question:"),
   p("What is the total Olympic Volleyball medal distribution for each country 
-    that has won a medal?")
+    that has won a medal?"),
+  p("The purpose of this data visualization is to further break down how many 
+    medals were won by each country in every Olympics since 1964. This will 
+    make the years that each country was successful in volleyball more apparent. 
+    This will in turn help viewers know which teams specifically to examine since 
+    national teams tend to change players over time. By selecting the most 
+    successfully-placing teams, we can focus more on the best athletes and 
+    teams.")
 )
 
 chart3_main_content <- mainPanel(
@@ -135,7 +157,10 @@ chart3_panel <- tabPanel(
 ## SUMMARY
 ###############################################################################
 
-summary_main_content <- mainPanel(
+summary_panel <- tabPanel(
+  "Takeaways",
+  img(src="indoorblocking.png", class = "intro"),
+  titlePanel("Main Takeaways"),
   h3("Cumulative Medals Visualization"),
   h4("Takeaways:"),
   p("This chart shows us how well a country is able to perform under different 
@@ -186,27 +211,19 @@ summary_main_content <- mainPanel(
     means when the USA is able to perform, they perform really well. From this,
     we can see that as a country, the USA is able to maintain an Olympic 
     Volleyball team that is more consistently skilled than Brazil, as they 
-    have won more gold medals.")
-)
-
-summary_panel <- tabPanel(
-  "Takeaways",
-  titlePanel("Main Takeaways"),
-  summary_main_content
+    have won more gold medals."),
+  class="article-formatting"
 )
 
 ###############################################################################
 ## REPORT
 ###############################################################################
 
-report_main_content <- mainPanel(
-  img(src="kerriwalsh.png", class = "intro"),
-  includeHTML("display-report.html")
-)
-
 report_panel <- tabPanel(
   "Final Report",
-  report_main_content
+  img(src="kerriwalsh.png", class = "intro"),
+  includeHTML("display-report.html"),
+  class="article-formatting"
 )
 
 # Define a variable `ui` containing the pages defined above
